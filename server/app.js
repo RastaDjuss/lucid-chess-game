@@ -152,12 +152,13 @@ fs.readFile(util.assets(), 'utf-8', (err, data) => {
   eval(data);
 });
 
-function getPlayerName(room, side) {
-  var game = games[room];
-  for (var p in game.players) {
-    var player = game.players[p];
-    if (player.side === side) {
-      return player.name;
-    }
-  }
-}
+// commented because of creating too many errors 
+// function getPlayerName(room, side) {
+//   var game = games[room];
+//   for (var p in game.players) {
+//     var player = game.players[p];
+//     if (player.side === side) {
+//       return player.name;
+//     }
+//   }
+// }
