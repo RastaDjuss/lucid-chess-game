@@ -49,6 +49,22 @@
         .u-text {
           font-size: 2vw;
         }
+        .wallet-status {
+          margin-top: 10px;
+          color: #fff;
+          font-size: 14px;
+          
+          &.connected {
+            color: #4CAF50;
+          }
+        }
+        
+        .wallet-buttons {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+        
         .u-button {
           margin: auto;
           background-image: url("../../../assets/img/victory_button.png");
