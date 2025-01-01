@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import React from 'react';
 
 import Play2Earn from "../../components/UI/Play2Earn/Play2Earn";
 import CreateGame from "../../components/UI/CreateGame/CreateGame";

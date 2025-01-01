@@ -1,4 +1,4 @@
-import create from "zustand"
+import { create } from 'zustand';
 import produce from "immer";
 
 const store = create(set => ({
@@ -7,5 +7,3 @@ const store = create(set => ({
         state.socket = val;
     }))
 }))
-
-export default store;

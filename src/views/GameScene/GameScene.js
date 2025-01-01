@@ -38,11 +38,10 @@ import {
   connectWallet,
   getCurrentWalletConnected,
 } from "../../utils/interact.js";
-import {chainId, llgContractAddress, llgRewardContractAddress} from '../../utils/address';
+import {chainId, lgContractAddress, lgRewardContractAddress} from '../../utils/address';
 
-import {getContractWithSigner, getContractWithoutSigner} from '../../utils/interact';
-import { Contract, ethers } from 'ethers'
-
+const parsedAmount = parseUnits(amount.toString(), 18);
+const formattedAmount = formatUnits(amount, 18);
 const llgContractABI = require("../../utils/llg-contract-abi.json");
 const llgRewardContractABI = require("../../utils/llg-reward-contract-abi.json");
 
@@ -1602,7 +1601,7 @@ export default class Scene extends Component {
                         texture = new THREE.TextureLoader().load(thunderstorm);
                     }
     
-                    const itemGeo = new THREE.PlaneBufferGeometry(0.8, 0.8, 100, 100)
+                    const itemGeo = new THREE.PlaneGeometry(0.8, 0.8, 100, 100)
                     const itemMaterial = new THREE.MeshStandardMaterial({
                         side: THREE.DoubleSide,
                         roughness: 1,
@@ -1845,7 +1844,7 @@ export default class Scene extends Component {
                         texture = new THREE.TextureLoader().load(thunderstorm);
                     }
     
-                    const itemGeo = new THREE.PlaneBufferGeometry(0.8, 0.8, 100, 100)
+                    const itemGeo = new THREE.PlaneGeometry(0.8, 0.8, 100, 100)
                     const itemMaterial = new THREE.MeshStandardMaterial({
                         side: THREE.DoubleSide,
                         roughness: 1,

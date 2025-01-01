@@ -1,0 +1,18 @@
+{
+    "socketServer": {
+        "port": "8510",
+        "url": "http://localhost:8510"
+    },
+    "database": {
+        "url": "mongodb://localhost:27017/chess"
+    },
+    "apiServer": {
+        "port": "8000",
+        "url": "http://localhost:8000"
+    },
+    "defaultGameSettings": {
+        "timeout": 300000,
+        "retryAttempts": 2,
+        "retryDelay": 10000
+    }
+}

@@ -7,7 +7,7 @@ import FriendPlay from "./views/FriendPlay";
 import GameScene from "./views/GameScene";
 import MatchPlay from "./views/MatchPlay";
 import Orientation from "./components/UI/Orientation/Orientation";
-import Connect from "./components/UI/Connect/Connect";
+import { Connect } from './components/UI/Connect/Connect';
 import Ranking from "./components/UI/Ranking/Ranking";
 import { WalletProvider } from './components/WalletProvider/WalletProvider';
 import React from 'react';

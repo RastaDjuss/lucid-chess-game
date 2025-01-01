@@ -1,7 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 const http = require("http");
-const io = require("socket.io")(8510);
+const io = require("socket.io")(8510, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true
+  }
+});
+
 const jsChessEngine = require("js-chess-engine");
 var express = require("express");
 var config = require("config");
@@ -76,8 +84,6 @@ io.sockets.on("connection", function (socket) {
     game.players[1].status = "joined";
     game.status = "ready";
     io.sockets.to(room).emit("ready", {
-      white: getPlayerName(room, "white"),
-      black: getPlayerName(room, "black"),
     });
   });
 
